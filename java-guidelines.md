@@ -27,7 +27,7 @@ Timed based Model:
 - **Robot Folder** contains files related to controling the main robot code loop that will periodically call various robot methods to control the robot based on operator/code input
 
 Example project structure:
-![alt text]()
+![alt text] ()
 
     
 

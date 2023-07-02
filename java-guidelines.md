@@ -52,7 +52,7 @@ Files --> autosave
 ## Naming
 ---
 
-### General Guidlines WIP
+### General Guidlines
 - Names should be meaningful
 - Long names > short names 
 - Avoid giving classes, methods, constants, or variables that have similar meanings different names.

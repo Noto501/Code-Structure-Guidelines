@@ -56,7 +56,6 @@ Files --> autosave
 - Names should be meaningful
 - Long names > short names 
 - Avoid giving classes, methods, constants, or variables that have similar meanings different names.
-- 
 
 ```java
 LIFT_ENCODER_DIOA			= 2;	//’A’ should go with Encoder

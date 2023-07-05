@@ -456,8 +456,7 @@ xboxDrv = new xboxDrv(1); // - TBD what port number for the xbox controller
 - Eventaully these statement need to be removed and cleaned up(any logic that needs to be explained should go in code block headers)
 
   ```java
- \//for shuffleboard
-MOTOR_ID = steerMotorID;
+MOTOR_ID = steerMotorID;  //for shuffleboard
   ```
 
 

@@ -456,8 +456,9 @@ xboxDrv = new xboxDrv(1); // - TBD what port number for the xbox controller
 - Eventually, these statements need to be removed and cleaned up(any logic that needs to be explained should now go in code block headers)
 - This prevents any confusion in the future about a variable with vague explanation comments.
 
-  ```java
+```java
 MOTOR_ID = steerMotorID;  //for shuffleboard
+```
 
 
 

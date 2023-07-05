@@ -169,7 +169,7 @@ Declarations should be sorted by the method they are used in(i.g. cmdProcElevato
 ### Imports
 All imports should be grouped at the top of a class.
 
-Avoid using wildercard(aka star imports) imports.
+Avoid using wildercard(aka star) imports.
 ### Magic Numbers
 
 Avoid magic numbers(arbitrary values in a code block).
@@ -426,25 +426,41 @@ for (int i = 0, i <= 10, i++)
 - Avoid writting comments for code that is self-explanatory.
 - Write comments to explain complex logic or algorithms.
 - Write comments if you need to take time to process the code every viewing.
-- Try to write code the is self explanatory (Avoid long conditional statments, long math operations that could be broken down, double negatives, etc.)
+- Try to write code that is self explanatory (Avoid long conditional statments, long math operations that could be broken down, double negatives, etc.)
 
 
-### File header Comment Blocks WiP
+### TBDs
+- write "//TBD - [message]" in code sections that need to be updated or changes at a future date
+- writing a consistent phrase such as TBD can make it easier to go back and find the areas of code that you need to update.
+```java
+xboxDrv = new xboxDrv(1); // - TBD what port number for the xbox controller
+```
+![alttext](resources/example-3.png)
+
+### File header Comment Blocks 
 - Should be defined at the top of every class
-- Should contain information about the class
-(ie. in an elevator class)
+- Should contain general information about the class
+
+![alttext](resources/example-2.png)
 
 ### Code block headers
 - Should be placed before a code block.
 - Avoid describing what the code block logically does
 - Instead, explain the intent of the code block (ie. this method determines the updated state for the robot)
 
+![alttext](resources/example-3.png)
+
 ### Single Line Statments
 - short comments to help explain the logic behind a section of a code block.
 - Should be placed at the end of a line of code or before a section of code.
+- Eventaully these statement need to be removed and cleaned up(any logic that needs to be explained should go in code block headers)
 
-### TBDs
-- write "//TBD - [message]" in code sections that need to be updated or changes at a future date
+  ```java
+ //for shuffleboard
+MOTOR_ID = steerMotorID;
+  ```
+
+
 
 
 

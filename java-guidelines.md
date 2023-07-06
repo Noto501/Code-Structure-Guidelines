@@ -56,7 +56,8 @@ This is done to improve the readability of code.
 
 ```Java
 // Good
-public int method(int a, int b) {
+public int method(int a, int b)
+{
     int c = 0;
     if (a >= (b + 1)) {
         c = (a - b) * 2;
@@ -65,7 +66,8 @@ public int method(int a, int b) {
 }
 
 // Bad
-public int method(int a,int b){
+public int method(int a,int b)
+{
     int c=0;
     if(a>=(b+1)){
         c=(a-b)*2;

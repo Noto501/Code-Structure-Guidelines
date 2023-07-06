@@ -92,86 +92,34 @@ x =  l / x + y * z / c - b / a;
 //better
 x =  (l / x) + ((y * z) / ((c - b) / a));
 ```
+### Brace Alignment
+Referencing [Allman Style](https://en.wikipedia.org/wiki/Indentation_style#Allman_style) of indentation, Braces for methods, classes, conditional statments should always line up.
 
-### Arrays and Enum Formmating
-```java
-// Recommended for short initializers
-new int[] {0, 1, 2, 3};
-private enum State { ON, OFF }
-
-// Recommended for longer initializers
-new int[] {
-  0, 1, 2, 3
-}; 
-
-private enum State { 
-                     STATE_1, 
-                     STATE_2,
-                     STATE_3 
-                             }
-```
-### Double Negatives in code
-Write code in positive terms instead of negative terms.
-```java
-//bad, because conditional is written in negative terms
-if (!isDisabled())
-{
-   <Code Block A>
-}
-else
-{
-   <Code Block B>
-}
-
-//Ok, since the two negative terms have been seperated, making it easier to understand for the programmer
-if (isDisabled() == false)
-{
-   <Code Block A>
-}
-else
-{
-   <Code Block B>
-}
-
-//better, since the conditional is written in positive terms
-if (isDisabled() == true)
-{
-   <Code Block B>
-}
-else
-{
-   <Code Block A>
-}
-```
-
-Writing code in positive terms makes the code much easier for humans to process.
-
-### Declarations
-Avoid multiple declarations per line
-```java
-//bad
-int level; String stringA 
-
-String stringB; int size
+This is done to correctly identify code blocks in nested conditional statments.
+```Java
+//ok
+boolean steering = true;
+ public void setDrivePwrIO(double drivePwrPercent) {
+        if(steering == true) {
+            DRIVE_MOTOR.set(ControlMode.PercentOutput, drivePwrPercent);
+        } else {
+            STEER_MOTOR.set(SteerPwr);
+        }
+    }
 
 //better
-int     level;	        
-int     size;	
-     
-String  stringA;
-String  stringB;
+public void setDrivePwrIO(double drivePwrPercent) 
+    {
+        if(steering == true) 
+        {
+            DRIVE_MOTOR.set(ControlMode.PercentOutput, drivePwrPercent);
+        }
+        else 
+        {
+            STEER_MOTOR.set(SteerPwr);
+        }
+    }
 ```
-
-- This allows comments to be written for each declared variable.
-
-Declarations should be sorted by the method they are used in(i.g. cmdProcElevator, startElevatorThread), then by the type(i.g. double, int).
-
-- This helps programmers easily find variables related to a certain method during troubleshooting/tuning.
-
-### Imports
-All imports should be grouped at the top of a class.
-
-Avoid using wildercard(aka star) imports.
 ### Magic Numbers
 
 Avoid magic numbers(arbitrary values in a code block).
@@ -254,6 +202,87 @@ if(xboxAux.getRightBumper() && Math.abs(xboxAux.getRightTriggerAxis()) > TRIGGER
    	{
      	climb.climbElevatorManualCntrl(elevatorDnInput);
    	}
+```
+
+### Double Negatives in code
+Write code in positive terms instead of negative terms.
+```java
+//bad, because conditional is written in negative terms
+if (!isDisabled())
+{
+   <Code Block A>
+}
+else
+{
+   <Code Block B>
+}
+
+//Ok, since the two negative terms have been seperated, making it easier to understand for the programmer
+if (isDisabled() == false)
+{
+   <Code Block A>
+}
+else
+{
+   <Code Block B>
+}
+
+//better, since the conditional is written in positive terms
+if (isDisabled() == true)
+{
+   <Code Block B>
+}
+else
+{
+   <Code Block A>
+}
+```
+
+Writing code in positive terms makes the code much easier for humans to process.
+
+### Declarations
+Avoid multiple declarations per line
+```java
+//bad
+int level; String stringA 
+
+String stringB; int size
+
+//better
+int     level;	        
+int     size;	
+     
+String  stringA;
+String  stringB;
+```
+
+- This allows comments to be written for each declared variable.
+
+Declarations should be sorted by the method they are used in(i.g. cmdProcElevator, startElevatorThread), then by the type(i.g. double, int).
+
+- This helps programmers easily find variables related to a certain method during troubleshooting/tuning.
+
+### Imports
+All imports should be grouped at the top of a class.
+
+Avoid using wildercard(aka star) imports.
+
+### Arrays and Enum Formmating
+```java
+// Recommended for short initializers
+new int[] {0, 1, 2, 3};
+private enum State { ON, OFF }
+
+// Recommended for longer initializers
+new int[] {
+  0, 1, 2, 3
+}; 
+
+private enum State { 
+                     STATE_1, 
+                     STATE_2,
+                     STATE_3 
+                             }
 ```
 
 
@@ -453,10 +482,10 @@ xboxDrv = new xboxDrv(1); // - TBD what port number for the xbox controller
 ![alttext](resources/example-3.png)
 
 ### Single Line Statments
-- short comments to help explain the logic behind a section of a code block.
+- Short comments to help explain the logic behind a section of a code block.
 - Should be placed at the end of a line of code or before a section of code.
 - Eventually, these statements need to be removed and cleaned up(any logic that needs to be explained should now go in code block headers)
-- This prevents any confusion in the future about a variable with vague explanation comments.
+
 
 ```java
 MOTOR_ID = steerMotorID;  //for shuffleboard

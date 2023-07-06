@@ -484,7 +484,7 @@ xboxDrv = new xboxDrv(1); // - TBD what port number for the xbox controller
 ### Single Line Statments
 - Short comments to help explain the logic behind a section of a code block.
 - Should be placed at the end of a line of code or before a section of code.
-- Eventually, these statements need to be removed and cleaned up(any logic that needs to be explained should now go in code block headers)
+- Eventually, these statements usually need to be removed and cleaned up(any logic that needs to be explained should now go in code block headers)
 
 
 ```java

@@ -109,12 +109,23 @@ Below is the method for "translateturn"
 
 ![alttext](/AtlasResources/transate%20turn%20example.png)
 
+In the individual swerve modules, the modules determine the optimal wheel angle to set the motors at. Along with using a mag enc to determine the current angle of the turn wheel, the pid controller within the swerve module uses the error between the two to set power to the turn motor.
+
+The modules also collect the calculated drive power from the Catzdrivetrain and just apply it to the drive motors.
+
+Example of catzSwerveModule
+![alttext](/AtlasResources/closets%20angle%20swerve%20module.png)
+
 
 ## Autonomous
 
 ![alttext](/AtlasResources/auton%20mapping.png)
 
 - "CatzAutonomous" house any resusable functions such as "drivestraight", distance recording, "turninplace"
+
+Example from CatzAutonomous "Turninplace"
+![alttext](/AtlasResources/drivestraighauton.png)
+
 - "CatzAutnomousPaths" house all paths that atlas will use during autonmous. Paths are chosen through shuffleboard through "senablechoser"
 Excerpt from catzAutonomous paths:
 ![alttext](/AtlasResources/senable%20choser%20example.png)
